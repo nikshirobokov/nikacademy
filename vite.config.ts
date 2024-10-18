@@ -13,8 +13,8 @@ export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const server: ServerOptions = {};
 
-  if (env.VITE_APP_PORT) {
-    server.port = Number(env.VITE_APP_PORT);
+  if (env.VITE_PORT) {
+    server.port = Number(env.VITE_PORT);
   }
 
   return {
