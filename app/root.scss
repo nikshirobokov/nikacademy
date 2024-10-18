@@ -1,7 +1,10 @@
+@forward "./components/header/header";
+@forward "./components/footer/footer";
+
 ul {
 	padding: 0;
 }
 
 body {
-	background-color: red;
+	background-color: whitesmoke;
 }

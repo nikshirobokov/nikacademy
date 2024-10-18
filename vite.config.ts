@@ -18,6 +18,13 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          quietDeps: true,
+        },
+      },
+    },
     plugins: [
       remix({
         future: {
