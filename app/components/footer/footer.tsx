@@ -5,9 +5,7 @@ import { RootLoadData } from "../../../global";
 export interface IFooterProps {}
 
 export const Footer: FC<IFooterProps> = () => {
-  const rootLoadData = useLoaderData<RootLoadData>();
+	const rootLoadData = useLoaderData<RootLoadData>();
 
-  return (
-    <footer className="footer">{rootLoadData.data.constants.copyright}</footer>
-  );
+	return <footer className="footer">{rootLoadData.data.constants.copyright}</footer>;
 };
