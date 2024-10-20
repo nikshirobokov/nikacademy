@@ -1,7 +1,7 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig, loadEnv, ServerOptions } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import * as process from "node:process";
+import { version } from "./package.json";
 
 declare module "@remix-run/node" {
 	interface Future {
@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => {
 	}
 
 	return {
+		define: {
+			__VERSION__: version,
+		},
 		css: {
 			preprocessorOptions: {
 				scss: {
